@@ -98,7 +98,6 @@ app.post("/search", async (req, res) => {
     res.send({ error: err.message });
   }
 });
-
 /* ========================= */
 /* 💳 BOOKING API */
 /* ========================= */
@@ -116,6 +115,17 @@ app.post("/book", async (req, res) => {
   }
 });
 
+/* ========================= */
+/* 📦 GET BOOKINGS API */
+/* ========================= */
+app.get("/bookings", async (req, res) => {
+  try {
+    const bookings = await Booking.find();
+    res.send(bookings);
+  } catch (err) {
+    res.send({ error: err.message });
+  }
+});
 /* ========================= */
 /* 🚀 START SERVER */
 /* ========================= */
