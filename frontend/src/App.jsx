@@ -6,7 +6,7 @@ import Dashboard    from "./pages/Dashboard";
 import MyBookings   from "./pages/MyBookings";
 import Confirmation from "./pages/Confirmation";
 import "./index.css";
-
+// update
 // Simple auth guard
 function Protected({ children }) {
   const email = localStorage.getItem("userEmail");
