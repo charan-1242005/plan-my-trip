@@ -8,7 +8,9 @@ const Booking = require("./models/Booking");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://planmytri.netlify.app"
+}));
 app.use(express.json());
 
 /* ========================= */

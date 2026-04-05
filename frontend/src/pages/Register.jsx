@@ -38,7 +38,7 @@ export default function Register() {
     if (user.password.length < 6) { setError("Password must be at least 6 characters."); return; }
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/register", {
+const res = await axios.post("https://plan-my-trip-a0dz.onrender.com/register", {
         name: user.name, email: user.email, password: user.password,
       });
       if (res.data.message === "User Registered Successfully") {

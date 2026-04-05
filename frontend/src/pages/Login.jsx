@@ -23,7 +23,7 @@ export default function Login() {
     if (!user.email || !user.password) { setError("Please fill in all fields."); return; }
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/login", user);
+     const res = await axios.post("https://plan-my-trip-a0dz.onrender.com/login", user);
       if (res.data.message === "Login Success") {
         localStorage.setItem("userEmail", user.email);
         localStorage.setItem("userName", res.data.name || user.email.split("@")[0]);

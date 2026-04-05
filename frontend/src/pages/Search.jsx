@@ -35,7 +35,7 @@ export default function Search() {
     if (!data.from || !data.to) return;
     setLoading(true); setResults([]);
     try {
-      const res = await axios.post("http://127.0.0.1:5000/search", data);
+axios.post("https://plan-my-trip-a0dz.onrender.com/search", data);
       setResults(res.data.trips || []);
     } catch { setResults([]); }
     finally { setLoading(false); }
